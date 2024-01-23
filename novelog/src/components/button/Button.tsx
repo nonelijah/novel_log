@@ -5,7 +5,6 @@ interface ContainerProps {
 }
 
 const Container = styled.button<ContainerProps>`
-    width: 100%;
     border-radius: 8px;
     min-width: 28px;
     padding: 8px 16px;
