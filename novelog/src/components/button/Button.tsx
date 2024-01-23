@@ -1,18 +1,28 @@
 import styled from 'styled-components';
-import { Component } from 'react';
+
+interface ContainerProps {
+    readonly color: string;
+}
+
+const Container = styled.button<ContainerProps>`
+    width: 100%;
+    border-radius: 8px;
+    min-width: 28px;
+    padding: 8px 16px;
+    color: var(--color-white);
+    background-color: ${(props) => props.color};
+`;
 
 interface Props {
     readonly label: string;
+    readonly color?: string;
     readonly onClick: () => void;
 }
 
-const Container = styled.button`
-    border-radius: 10px;
-`;
-
-export class Button extends Component<Props> {
-    render() {
-        const { label, onClick } = this.props;
-        return <Container onClick={onClick}>{label}</Container>;
-    }
-}
+export const Button = ({ label, color = '#0D98BA', onClick }: Props) => {
+    return (
+        <Container color={color} onClick={onClick}>
+            {label}
+        </Container>
+    );
+};
