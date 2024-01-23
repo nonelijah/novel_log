@@ -7,6 +7,7 @@ interface ContainerProps {
 const Container = styled.button<ContainerProps>`
     border-radius: 8px;
     min-width: 28px;
+    font-size: 1rem;
     padding: 8px 16px;
     color: var(--color-white);
     background-color: ${(props) => props.color};
