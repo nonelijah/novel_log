@@ -6,6 +6,7 @@ function App() {
     return (
         <BrowserRouter>
             <GlobalStyle />
+            <h1 className="a11y-hidden">Novel Log</h1>
             <AppRouters />
         </BrowserRouter>
     );
